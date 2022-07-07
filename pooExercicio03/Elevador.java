@@ -68,25 +68,25 @@ public class Elevador {
 	}
 
 	public void inicializa() {
-		System.out.println("Seja Bem-Vindo(a) ao ###" + "\nQuantidade de andares: " + getQuantidadeAndares()
-				+ "\nCarga m·xima do elevador: " + getCargaMaxima() + " pessoas" + "\nAndar atual: " + getAndarAtual()
+		System.out.println("Seja Bem-Vindo(a) ao Edif√≠cio" + "\nQuantidade de andares: " + getQuantidadeAndares()
+				+ "\nCarga m√°xima do elevador: " + getCargaMaxima() + " pessoas" + "\nAndar atual: " + getAndarAtual()
 				+ "\nQuantidade de pessoas presentes no elevador nesse momento: " + getQntPessoas());
 
 		System.out.println();
 	}
 
 	public void entra() {
-		System.out.println("Informe quantas pessoas v„o entrara no elevador: ");
+		System.out.println("Informe quantas pessoas v√£o entrara no elevador: ");
 		setQntPessoas(leitor.nextInt());
 
 		if ((getTotalPessoas() + getQntPessoas()) <= CARGA_MAXIMA) {
 
 			setTotalPessoas(getTotalPessoas() + getQntPessoas());
 			System.out.println("Entrada liberada!" + "\nSeja Bem-Vindo(a)");
-			System.out.println("O n˙mero atual de pessoas dentro do elevador È de " + getTotalPessoas());
+			System.out.println("O n√∫mero atual de pessoas dentro do elevador √© de " + getTotalPessoas());
 		} 
 		else
-			System.out.println("Capacidade m·xima de carga atingida. Fica para a prÛxima!");
+			System.out.println("Capacidade m√°xima de carga atingida. Fica para a pr√≥xima!");
 		System.out.println();
 		
 	}
@@ -96,14 +96,14 @@ public class Elevador {
 		setSaiPessoa(leitor.nextInt());
 
 		if (getSaiPessoa() > getTotalPessoas()) {
-			System.out.println("Numero de pessoas que solicitaram a saida È maior que o n˙mero de pessoas dentro do elevador.");
-			System.out.println("O n˙mero atual de pessoas dentro do elevador È de " + getTotalPessoas());	
+			System.out.println("Numero de pessoas que solicitaram a saida √© maior que o n√∫mero de pessoas dentro do elevador.");
+			System.out.println("O n√∫mero atual de pessoas dentro do elevador √© de " + getTotalPessoas());	
 		} 
 		else 
 		{
 			setTotalPessoas(getTotalPessoas() - getSaiPessoa());
-			System.out.println("AtÈ logo! ");
-			System.out.println("O n˙mero atual de pessoas dentro do elevador È de " + getTotalPessoas());
+			System.out.println("At√© logo! ");
+			System.out.println("O n√∫mero atual de pessoas dentro do elevador √© de " + getTotalPessoas());
 		}
 		
 		System.out.println();
@@ -119,22 +119,22 @@ public class Elevador {
 
 		if (getAndarAtual() >= getQuantidadeAndares())
 
-			System.out.println("N„o existe anderes acima deste!");
+			System.out.println("N√£o existe anderes acima deste!");
 
 		else {
 			setAndarAtual(getAndarAtual() + 1);
-			System.out.println("....\n....\nVocÍ chegou no andar " + getAndarAtual());
+			System.out.println("....\n....\nVoc√™ chegou no andar " + getAndarAtual());
 		}
 		System.out.println();
 	}
 
 	public void desce() {
 		if (getAndarAtual() <= 0)
-			System.out.println("N„o existe andares abaixo deste.");
+			System.out.println("N√£o existe andares abaixo deste.");
 
 		else {
 			setAndarAtual(getAndarAtual() - 1);
-			System.out.println("....\n....\nVocÍ chegou no andar " + getAndarAtual());
+			System.out.println("....\n....\nVoc√™ chegou no andar " + getAndarAtual());
 		}
 		System.out.println();
 
