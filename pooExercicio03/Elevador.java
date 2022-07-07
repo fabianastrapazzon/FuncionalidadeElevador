@@ -68,7 +68,7 @@ public class Elevador {
 	}
 
 	public void inicializa() {
-		System.out.println("Seja Bem-Vindo(a) ao Edifício" + "\nQuantidade de andares: " + getQuantidadeAndares()
+		System.out.println("Seja Bem-Vindo(a) ao Edifício Central" + "\nQuantidade de andares: " + getQuantidadeAndares()
 				+ "\nCarga máxima do elevador: " + getCargaMaxima() + " pessoas" + "\nAndar atual: " + getAndarAtual()
 				+ "\nQuantidade de pessoas presentes no elevador nesse momento: " + getQntPessoas());
 
